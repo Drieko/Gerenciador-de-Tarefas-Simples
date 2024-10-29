@@ -1,13 +1,16 @@
 import axios from 'axios';
 
-const axiosInstance = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com',
-    timeout: 5000,
-    headers: {
-        'Content-Type': 'application/json'
-    }
+const api = axios.create({
+  baseURL 
 });
 
+api.get('/dados')
+  .then(response => {
+    console.log(response.data);
+  })
+  .catch(error => {
+    console.error(error);
+  });
 const ToDoApi = {
     'getTasks': () => axiosInstance.get('/todos'),
     'getTask': (id) => axiosInstance.get(`/todos/${id}`),
