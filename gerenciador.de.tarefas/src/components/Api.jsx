@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-    baseURL: "https://gerenciador-de-tarefas-back.onrender.com",
+    baseURL: "https://gerenciador-de-tarefas-back.onrender.com/api",
 });
 
 const ToDoApi = {
