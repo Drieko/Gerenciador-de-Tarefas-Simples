@@ -10,7 +10,7 @@ function TodoApp() {
 
   useEffect(() => {
     // Código do efeito aqui
-    ToDoApi.getTask()
+    ToDoApi.getTasks()
       .then((response) => {
         setTasks([...tasks,{text: response.data.title, completed: false}])
       })
