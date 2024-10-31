@@ -6,11 +6,11 @@ const axiosInstance = axios.create({
 });
 
 const ToDoApi = {
-    'getTasks': () => axiosInstance.get('/todos'),
-    'getTask': (id) => axiosInstance.get(`/todos/${id}`),
-    'createTask': (task) => axiosInstance.post('/todos', task),
-    'updateTask': (id, task) => axiosInstance.put(`/todos/${id}`, task),
-    'deleteTask': (id) => axiosInstance.delete(`/todos/${id}`)
+    'getTasks': () => axiosInstance.get('/'),
+    'getTask': (id) => axiosInstance.get(`/${id}`),
+    'createTask': (task) => axiosInstance.post('/', task),
+    'updateTask': (id, task) => axiosInstance.put(`/${id}`, task),
+    'deleteTask': (id) => axiosInstance.delete(`/${id}`)
 }
 
 export default ToDoApi
