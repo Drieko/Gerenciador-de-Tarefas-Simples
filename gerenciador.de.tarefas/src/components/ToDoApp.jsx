@@ -20,10 +20,9 @@ function TodoApp() {
   const addTask = () => {
     if (task.trim()) {
       ToDoApi.createTask({
-        title:task,
-        completed: false
+        name:task
       }).then((response) => console.log(response)).catch((error) => console.log(error))
-      setTasks([...tasks, { text: task, completed: false }]);
+      setTasks([...tasks, { text: task}]);
       setTask(''); // Limpa o campo de input
     }
     // CODIGO EXEMPLO
