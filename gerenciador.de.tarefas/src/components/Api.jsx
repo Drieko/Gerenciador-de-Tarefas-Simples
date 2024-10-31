@@ -8,7 +8,7 @@ const axiosInstance = axios.create({
 const ToDoApi = {
     'getTasks': () => axiosInstance.get('/'),
     'getTask': (id) => axiosInstance.get(`/${id}`),
-    'createTask': (task) => axiosInstance.post('/create', task),
+    'createTask': (task) => axiosInstance.post('/create/', task),
     'updateTask': (id, task) => axiosInstance.put(`/${id}`, task),
     'deleteTask': (id) => axiosInstance.delete(`/${id}`)
 }
